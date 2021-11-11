@@ -1,0 +1,16 @@
+module.exports = {} -> para export um aquivo ou função
+
+const teste = require(./) -> para pegar o arquivo
+
+export function () -> exportando uma função
+
+export default {
+   função1
+   função2
+}
+
+import teste from './arquivo.js';
+ou 
+import {teste1, teste2} from './arquivo.js';
+
+obs: colocar o type="module" na tag script para o google chromer entender um import 

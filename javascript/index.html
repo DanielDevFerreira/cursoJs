@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        setTimeout(() => {
+           console.log('teste Timeout') 
+        }, 2000);
+
+        let contador = 0;
+        let contador2 = 0;
+
+        setInterval(() => {
+            contador++;
+            const tag = document.querySelector("#time");
+            const tag2 = document.querySelector("#time2");
+
+            if(contador > 60){
+                contador = 0;
+                contador2++;
+            }
+
+            tag2.innerHTML = contador;
+            tag.innerHTML = contador2;
+            // console.log(contador);
+        }, 1000);
+    </script>
+</head>
+<body>
+    <div>
+        <span id="time"></span>:<span id="time2"></span>
+    </div>
+
+    <button id="somar">Somar</button>
+    <button id="subtrair">Subtrair</button>
+    
+    <script type="module">
+        const somarEl = document.querySelector("#somar");
+        const subtrairEl = document.querySelector("#subtrair");
+
+        // chama a função do import de forma assincrona 
+        somarEl.addEventListener("click", (e) => {
+            import ("./calculos.js").then(({somar}) => {
+                console.log(somar(5,5));
+            }) 
+        })
+        
+        // chama a função do import de forma assincrona
+        subtrairEl.addEventListener("click", (e) => {
+            import ("./calculos.js").then(({subtrair}) => {
+                console.log(subtrair(5,5));
+            }) 
+        })
+
+    </script>
+</body>
+</html>
