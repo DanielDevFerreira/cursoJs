@@ -1,0 +1,27 @@
+{
+  "name": "curso-hcode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon node/index",
+    "start": "node node/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielDevFerreira/cursoJs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanielDevFerreira/cursoJs/issues"
+  },
+  "homepage": "https://github.com/DanielDevFerreira/cursoJs#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nedb": "^1.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
