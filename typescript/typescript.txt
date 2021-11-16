@@ -1,0 +1,3 @@
+tipo  unknown -> parecido com any, porem não permite atribuir seu valor para outra variável
+sobre função no typescript -> podemos falar o tipo dos parâmetro e da função, podemos colocar um valor
+padrão e falar que é opcional
